@@ -115,5 +115,66 @@
 
 
     <!-- 슬라이더 스스로 만들어보기 -->
+
+    <!-- 소스 추가 수정해서 커밋 푸쉬후 풀리퀘스트 요청하기 -->
+
+    <script>
+    //html만 읽어들이고나서 실행
+    document.addEventListener('DOMContentLoaded', () => {
+        const h2 = (text) => `<h2>${text}</h2>`;
+        document.body.innerHTML += h2("git 교과서 강추한다! 이해쏙쏙");
+        document.body.innerHTML += h2("choigre github에 pull request를 해보기 위해 소스를 수정중임, git에 홀딱 빠진 줘니");
+    });
+    //html, image, css 모든 리소스를 내려받고나서 실행
+    document.addEventListener('load', () => { });
+    document.onload = function(){ }
+    console.log( document.head, document.body, document.title );
+    </script>
+
+
+
+    <div class="group">
+        <button type="button">버튼1</button>
+        <button type="button">버튼2</button>
+        <button type="button">버튼3</button>
+    </div>
+    <style>
+    .group button.active {background:#000;color:#fff;font-weight:bold;}
+    </style>
+    <script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        let button = document.querySelectorAll('button');
+/*
+        button.forEach((value,index,arr) => {
+            value.addEventListener('click', (e) => {
+                console.log( e.currentTarget.innerText );
+
+                button.forEach((value,index,arr) => {
+                    value.classList.remove('active');
+                });
+
+                e.currentTarget.classList.add('active');
+            });
+        });
+*/
+        button.forEach((v,i,arr)=>{
+            v.addEventListener('click', buttonClickHandler);
+        });
+        function buttonClickHandler(e){
+            button.forEach((v,i,arr)=>{
+                v.classList.remove('active');
+            });
+            e.currentTarget.classList.add('active');
+        }
+    });
+
+    
+    </script>
+
+
+
+
+
+
 </body>
 </html>
